@@ -49,9 +49,6 @@ const printQuote = () => {
 };
 
 
-
-//<p class="source"> ${quotes.source} </p>
-
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
