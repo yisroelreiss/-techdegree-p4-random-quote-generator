@@ -33,8 +33,8 @@ const getRandomQuote = (arr) => {
  * `printQuote` function
 ***/
 
-const printQuote = () => {
-  let randomQuote = getRandomQuote();
+const printQuote = (arr) => {
+  let randomQuote = getRandomQuote(arr);
   let html = `
   <p class="quote"> ${randomQuote.quote} </p>
   <p class="source"> ${randomQuote.source}`
@@ -45,14 +45,15 @@ const printQuote = () => {
     html += `<span class="year"> ${randomQuote.year}</span>`;
   }
   html += `</p>`; 
-  document.getElementById('quote-box').innerHTML = yourStringHere; 
+  document.getElementById('quote-box').innerHTML = html; 
 };
 
+// console.log(printQuote(quotes));
 
 /***
  * click event listener for the print quote button
  * DO NOT CHANGE THE CODE BELOW!!
 ***/
 
-document.getElementById('load-quote').addEventListener("click", printQuote, false);
+document.getElementById('load-quote').addEventListener("click", printQuote(quotes), false);
 
